@@ -359,7 +359,7 @@ struct msm_eeprom_cfg_data32 {
 	enum eeprom_cfg_type_t cfgtype;
 	uint8_t is_supported;
 	union {
-#ifdef CONFIG_WT88047_CAMERA
+#if defined(CONFIG_WT88047_CAMERA) || defined(CONFIG_WT86621_CAMERA)
 		char eeprom_name[MAX_SENSOR_NAME];
 #else
 		char eeprom_name[MAX_EEPROM_NAME];
