@@ -90,6 +90,8 @@ dtb-$(CONFIG_ARCH_MSM8916) += msm8916-ql790.dtb
 else ifeq ($(CONFIG_MACH_WINGTECH_MSM8916),y)
 ifeq ($(CONFIG_MACH_WT88047),y)
 dtb-$(CONFIG_ARCH_MSM8916) += msm8916-wt88047.dtb
+else ifeq ($(CONFIG_MACH_WT86621),y)
+dtb-$(CONFIG_ARCH_MSM8916) += msm8916-wt86621.dtb
 else ifeq ($(CONFIG_MACH_T86519A1),y)
 dtb-$(CONFIG_ARCH_MSM8916) += msm8916-t86519a1.dtb
 endif
