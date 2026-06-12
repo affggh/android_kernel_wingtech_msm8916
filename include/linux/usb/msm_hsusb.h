@@ -113,8 +113,8 @@ enum msm_usb_phy_type {
 #define IDEV_ACA_CHG_MAX	750
 #define IDEV_ACA_CHG_LIMIT	500
 
-/* CONFIG_MACH_WT88047 */
-#elif defined (CONFIG_MACH_WT88047)
+/* CONFIG_MACH_WT88047 and CONFIG_MACH_WT86621 */
+#elif defined (CONFIG_MACH_WT88047) || defined (CONFIG_MACH_WT86621)
 #define IDEV_CHG_MAX	1050
 #define IDEV_CHG_MIN	500
 #define IUNIT		100

@@ -442,7 +442,7 @@ static struct attribute_group aw2013_led_attr_group = {
 	.attrs = aw2013_led_attributes
 };
 
-#ifndef CONFIG_MACH_WT88047
+#if !defined(CONFIG_MACH_WT88047) && !defined(CONFIG_MACH_WT86621)
 static int aw_2013_check_chipid(struct aw2013_led *led)
 {
 	u8 val;
@@ -639,7 +639,7 @@ static int aw2013_led_probe(struct i2c_client *client,
 
 	mutex_init(&led_array->lock);
 
-#ifndef CONFIG_MACH_WT88047
+#if !defined(CONFIG_MACH_WT88047) && !defined(CONFIG_MACH_WT86621)
 	ret = aw_2013_check_chipid(led_array);
 	if (ret) {
 		dev_err(&client->dev, "Check chip id error\n");
