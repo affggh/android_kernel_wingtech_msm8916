@@ -27,4 +27,10 @@ config MACH_WT88047
 	help
 	  Support for Wingtech WT88047 variant
 
+config MACH_WT86621
+	bool "WT86621 board"
+	select MACH_WINGTECH_MSM8916
+	help
+	  Support for Wingtech WT86621 variant
+
 endmenu
