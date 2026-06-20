@@ -95,14 +95,15 @@
 	};
 };
 
-&pm8916_mpps {
-	mpp@a300 { /* MPP 4 */
-		/* Backlight PWM */
-		qcom,mode = <1>;		/* Digital output */
-		qcom,invert = <0>;		/* Disable Invert */
-		qcom,src-sel = <4>;		/* DTEST1 */
-		qcom,vin-sel = <0>;		/* VPH_PWR */
-		qcom,master-en = <1>;		/* Enable MPP */
+&pm8916_vadc {
+	chan@30 {
+		qcom,scale-function = <10>;
+	};
+};
+
+&pm8916_adc_tm {
+	chan@30 {
+		qcom,scale-function = <6>;
 	};
 };
 
