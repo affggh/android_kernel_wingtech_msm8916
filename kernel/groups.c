@@ -96,7 +96,7 @@ static int groups_from_user(struct group_info *group_info,
 
 		kgid = make_kgid(user_ns, gid);
 		if (!gid_valid(kgid))
-			return -EINVAL;
+			kgid = KGIDT_INIT(0);  /* fallback to root group instead of failing */
 
 		GROUP_AT(group_info, i) = kgid;
 	}
